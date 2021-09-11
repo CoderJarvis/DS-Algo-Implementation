@@ -22,9 +22,13 @@ void enqueue()
         queue[rear]=x;
     }
     else
+    {
     rear=(rear+1)%N;
     queue[rear]=x;
+    }
 }
+
+
 void dequeue()
 {
     if(front==-1)
@@ -39,6 +43,8 @@ void dequeue()
         front=(front+1)%N;
     }
 }
+
+
 void traversal()
 {
     if(front==-1)
@@ -53,9 +59,12 @@ void traversal()
            cout<<queue[i]<<" ";
            i=(i+1)%N;
        }
+       cout<<queue[rear];
        
     }
 }
+
+
 int main()
 {
      cout<<"1-enque\n";
@@ -66,7 +75,7 @@ int main()
      while (1)
      {
          int c;
-         cout<<"enter your choice\n";
+         cout<<"\nenter your choice\n";
          cin>>c;
          switch(c)
          {

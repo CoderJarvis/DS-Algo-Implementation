@@ -46,8 +46,9 @@ void traversal()
    if(front == -1)
     cout<<"queue is empty\n";
    else
-   {
-         for(int i=0;i<N;i++)
+   {    
+         int i=front;
+         for(;i<=rear;i++)
     {
         cout<<queue[i]<<" ";
     }
