@@ -2,18 +2,18 @@
 using namespace std;
 int binarySearch(int a[],int size,int key)
 {
-    int l,h,mid;
-    l=0;
-    h=size-1;
-    while(l<=h)
+    int low,high,mid;
+    low=0;
+    high=size-1;
+    while(low<=high)        //if i will cross j then the element is not present
     {
-        mid=(l+h)/2;
-        if(key==a[mid])
+        mid=(low+high)/2;   //find out the mid first
+        if(key==a[mid])     //if a[mid] match with key return mid
         return mid;
-        else if(key<a[mid])
-        h=mid-1;
-        else
-        l=mid+1;
+        else if(key<a[mid]) //if key is less the a[mid] you have to change the high to mid-1
+        high=mid-1;
+        else                //if key is greater than a[mid] you have change the low to mid+1
+        low=mid+1;
     }
     return -1;
 }
