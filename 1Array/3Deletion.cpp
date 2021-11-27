@@ -36,7 +36,7 @@ int main()
      {
          arr[i-1]=arr[i];
      }
-     n--;
+     n--;///important
      cout<<"\nyour new array is\n";
      for(int i=0;i<n;i++)
      {
